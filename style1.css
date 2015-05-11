@@ -1,20 +1,9 @@
 body {
 background-color: #333366;
 }
-li {
-  list-style: none;
-  text-decoration: none;
-}
-.icons>li {
-  float: left;
-}
-
 h1, h2, h3, h4, h5, p {
   color: #523D00;
   font-family: "Adobe Gurmukhi";
-}
-.icons {
-  float: center;
 }
 .profile {
   position: relative;
@@ -22,6 +11,7 @@ h1, h2, h3, h4, h5, p {
   height: 500px;
   margin-left: 36%;
   margin-top: 5%;
+
 }
 .profile-data {
   margin-bottom: 25%;
@@ -32,14 +22,17 @@ h1, h2, h3, h4, h5, p {
   top: 0;
   float: center;
   background-color: #E6EBF0;
-   border-radius: 25px;
+  border-radius: 14px;
   border: 2px solid #333366;
+  -webkit-box-shadow: 3px 3px 58px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 58px 2px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 58px 2px rgba(0,0,0,0.75);
 }
 .profile-pic {
   width: 100%;
   height: 150px;
-  border-top-right-radius: 21px;
-  border-top-left-radius: 21px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 .profile-pic-face {
   width: 170px;
@@ -48,10 +41,6 @@ h1, h2, h3, h4, h5, p {
   border: 4px solid #ffffff;
   margin-top: -22%;
   margin-left: 25%;
-}
-.icon {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
 }
 .name,
 .nickname {
@@ -72,115 +61,58 @@ h1, h2, h3, h4, h5, p {
 a {
   color: #ffffff;
 }
-
-.fa-github {
-  display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 2px 2px #999;
-    padding: 0px;
-    text-decoration: none;
-    text-align: center;
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: normal;
-    line-height: 1.5em;
-    border-radius: 25px;
-    -moz-border-radius:25px;
-    -webkit-border-radius:25px;
-    opacity: 0.75;
-    background-color: #FFDB4D;
+/* FOLLOW BUTTON */
+ .g-bg {
+  background: #de4c34;
+  height: 40px;
+  margin-left: 95px;
+  width: 166px; 
+  border-radius: 7px
 }
-
-.fa-facebook {
-  display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 2px 2px #999;
-    padding: 0px;
-    text-decoration: none;
-    text-align: center;
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: normal;
-    line-height: 1.5em;
-    border-radius: 25px;
-    -moz-border-radius:25px;
-    -webkit-border-radius:25px;
-    opacity: 0.75;
-  background-color: #4060A5;
+ .g-bg:after {
+  color: #fff;
+  content: "FOLLOW";
+  font-family: 'Oswald', sans-serif;
+  height: 37px;
+  left: 32%;
+  position: relative;
+  text-transform: uppercase;
+  top: 22%;
+  width: 41px; 
 }
-
-.fa-twitter {
-  display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 2px 2px #999;
-    padding: 0px;
-    text-decoration: none;
-    text-align: center;
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: normal;
-    line-height: 1.5em;
-    border-radius: 25px;
-    -moz-border-radius:25px;
-    -webkit-border-radius:25px;
-    opacity: 0.75;
-  background-color: #00ABE3;
+.g-bg:hover {
+  cursor: pointer;
 }
-
-.fa-dribbble {
-  display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 2px 2px #999;
-    padding: 0px;
-    text-decoration: none;
-    text-align: center;
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: normal;
-    line-height: 1.5em;
-    border-radius: 25px;
-    -moz-border-radius:25px;
-    -webkit-border-radius:25px;
-    opacity: 0.75;
-    background-color: #ea4c89;
+.g-bg:active {
+  background: #ce3e26;
 }
+ hr{
+    margin-top: -50px;
+    height: 4px;
+    }
+.left-font{
+  margin-left: 30px;
+  margin-top: 9px;
+  margin-bottom: 20px;
+  font-weight: 8px;
+  color: #333366; 
+  font-size: 20px
 
-.overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  left; 0;
-  width: 100%;
-  height: 100%;
-  background-color: #B2B2D1;
-  opacity: 0.9;
 }
-
-.btn {
-  position: absolute;
-  margin-top: 30%;
-  margin-left: 10%;
-  width: 80%;
-  height: 50px;
-  border: 3px solid #ffffff;
-  background-color: transparent;
-  font-size: 1.05em;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.down-btn {
-  margin-top: 50%;
+.right-font{
+  margin-left: 200px;
+  font-weight: 8px;
+  font-size: 20px;
+  color: #333366;
+  margin-top: -42px;
+  margin-bottom:20px;
+}  
+.vertical{
+  height:58px;
+  width:0;
+  border:0;
+  border-left:3px;
+  border: 1px solid gray; 
+  margin-left:168px; 
+  margin-top:-58px
 }
