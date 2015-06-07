@@ -1,0 +1,154 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Akshay
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & New Delhi, India  | 23 April 1996 \\
+    \textsc{Address:}   & L-126A, Shastri Nagar Delhi-110052, India \\
+    \textsc{Phone:}     & +91-8586825185\\
+    \textsc{email:}     & \href{mailto:akoli0082@gmail.com}{akoli0082@gmail.com}\\
+        \textsc{Github:}     & \href{https://github.com/akki12345}{https://github.com/akki12345}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+\textsc{Summer 2014} & Summer Intern at \textsc{Institute of Informatics and Communication}\\&\footnotesize{Developed a social networking website using open source sharetronix software in PHP.
+Link : https://github.com/akki12345/social-networking-website.}\\\\
+\textsc{January 2014} & \textsc{Open Student Organization, University of Delhi}\\&\footnotesize{Responsibilities includes maintainance and development of the web portal, website and online presence of the organization.}\\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+\textsc{June} 2017 :& B.Tech In (IT and Mathematical Innovation) at \textbf{University of Delhi}, India\\
+\end{tabular}
+
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+Basic Knowledge:& \textsc{Python}, \textsc{Embedded C}, \textsc{R}, \textsc{Matlab} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+Intermediate Knowledge:& \textsc{PHP}, Javascript, Java, Android,  C++, C, Ubuntu, Windows\\
+Advance Knowledge:& \textsc{HTML}, CSS, MYSQL\\
+Miscellaneous:& \textsc{Gimp}, Github,  Mathematica \\
+\end{tabular}
+
+%Section: Application developed 
+\section{Application Developed}
+\begin{tabular}{r|p{11cm}}
+\textsc{Fab'2015} & \textsc{Antardhvani Android App}\\&\footnotesize{The Delhi University Antardhvani Cultural Festival was conceptualized and started in 2011 and has become the showpiece event of India’s highest rated university.The annual Cultural Festival of the University of Delhi was named ’Antardhvani’ by Vice Chancellor.
+Link : https://play.google.com/store/apps/details?id=antardhvani.du.ac.in.antardhvani.}\\\\
+\textsc{Nov'2014} & \textsc{Mini-shell}\\&\footnotesize{This is a mini-UNIX-shell (a simple mini-Unix-Shell written in C). It employs system calls to execute the commands. Many trivial functions of shell has been incorporated in it   .
+Link : https://github.com/akki12345/Mini-Awesome-Shell}\\\\
+\textsc{dec'2014} & \textsc{Travelling Salesman Problem And Hamiltonian Cycle}\\&\footnotesize{Travelling Salesman Problem (TSP): Given a set of cities and distance between every pair of cities,the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.}
+\\&\footnotesize{Link : https://github.com/akki12345/Travelling-SalesMan-problem.}
+\\&\footnotesize{Hamiltonian Cycle: A Hamiltonian cycle, also called a Hamiltonian circuit, is a graph cycle (i.e., closed loop) through a graph that visits each node exactly once.Design algorihtm and implement in C lan
+guage.}
+\\&\footnotesize{Link :https://github.com/akki12345/Detect-Hamiltonian-cycle-in-Graph-.}\\\\
+\end{tabular}
+
+%Section: Application developed 
+\begin{tabular}{r|p{11cm}}
+\textsc{Fab'2014} & \textsc{Shabdvriksh}\\&\footnotesize{www.Shabdvriksh.com is a Hindi to Hindi and English to Hindi Online dictionary.It is a dynamic website in which MYSQL has been used for managing the database and php for serving the dynamic content.front end is developed in html, css and javascript, jquery. 
+Link : www.shabdvriksh.com.}\\\\
+\textsc{April'2014} & \textsc{Singular Value Decomposition and Image processing }\\&\footnotesize{The singular value decomposition (SVD) is a factorization of a real or complex matrix.. 
+Link : https://github.com/akki12345/singular-value-decomposition.}\\\\
+\textsc{April'2015} & \textsc{Motion Based Light System}\\&\footnotesize{Motion Based Light system is a device that detect the object motion and when the motion has occur the light will glow and when the motion is end the light will off.I use a PIR motion sensor to detect object motion and arduino for programming.}\\\\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Achievement And Certification }
+\begin{tabular}{rl}
+ \textsc{Sept.} 2010 & In Yoga, secured 2st position in the School and Won Medal.\normalsize\\
+ \textsc{March.} 2015 & won third prize in sankalan(university of delhi programming contest).\normalsize\\
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Hindi:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\end{tabular}
+
+\section{Interests and Activities}
+Technology, Open-Source, Programming, Android Development\\
+Solving Puzzels and Rubik's cube, Football, Cricket
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
